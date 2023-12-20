@@ -5,19 +5,36 @@
 
 ## Description et objectifs 🎯
 
-<!--- Décrire le cours en quelques lignes -->
+Ce cours s'adresse aux débutants en Java qui souhaitent apprendre les bases de Java EE.
+
+### Prérequis 📋
+
+- Avoir des bases en Java et en programmation orientée objet ([Cours Java POO](https://github.com/Octocorn-Learning/Java-POO))
+- Avoir des bases en programmation web (HTML, CSS)
+- IntelliJ IDEA (ou autre IDE Java) + JDK 17+
 
 ## Plan de cours 🗺️
 
-<!--- 
-- [ ] Chapitre
--->
+- [ ] Introduction
+    - Présentation du cours
+    - Présentation de Java EE
+    - Setup de l'environnement de travail
+- [ ] Maven
+    - Présentation de Maven
+    - Création d'un projet Maven
+    - Gestion des dépendances
+- [ ] Servlets
+- [ ] JSP
+- [ ] JSTL
+- [ ] JDBC
+- [ ] JPA
+
 
 ## Suivre ce cours 📚
 
 ### En autonomie 🚀
 
-Le cours est Open Source, vous pouvez donc le suivre en autonomie en vous rendant sur la page [GitHub]() du cours.  
+Le cours est Open Source, vous pouvez donc le suivre en autonomie en vous rendant sur la page [GitHub](https://octocorn-learning.github.io/Java-EE/#/) du cours.  
 Vous pouvez bénéficier des explications et des exercices. Enjoy ! ❤️
 
 ### En présentiel/distanciel 🎓
@@ -48,6 +65,5 @@ N'hésitez pas à partager le cours autour de vous !
 
 ## Ressources 👜
 
-<!-- 
-- Citez les sources utilisées pour la création du cours
--->
+- [gayerie.dev](https://gayerie.dev/epsi-poe-201703/javaee/index.html)
+- [openclassrooms.com](https://openclassrooms.com/fr/courses/2434016-developpez-des-sites-web-avec-java-ee/2438571-quest-ce-que-java-ee)
