@@ -19,10 +19,7 @@ Ce cours s'adresse aux débutants en Java qui souhaitent apprendre les bases de 
     - Présentation du cours
     - Présentation de Java EE
     - Setup de l'environnement de travail
-- [ ] Maven
-    - Présentation de Maven
-    - Création d'un projet Maven
-    - Gestion des dépendances
+    - Maven
 - [ ] Servlets
 - [ ] JSP
 - [ ] JSTL
