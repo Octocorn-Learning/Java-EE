@@ -242,9 +242,9 @@ sources:
 │       │   └── com
 │       │       └── example
 │       │           └── HelloWorldServlet.java # Servlet
-│       └── webapp # Contenu du site web
+│       └── webapp # Contenu du site web, généré par l'IDE
 │           ├── index.jsp # Page JSP
-│           └── WEB-INF
+│           └── WEB-INF # Dossier protégé qui contient les fichiers de configuration et les JSP
 │               └── web.xml # Fichier de configuration
 └── pom.xml
 ```
@@ -329,9 +329,7 @@ public class HelloServlet extends HttpServlet {
 
 ## Hello World
 
-### web.xml
-
-`web.xml`
+### `web.xml`
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -342,6 +340,10 @@ public class HelloServlet extends HttpServlet {
 </web-app>
 ```
 
+> Avant, la configuration des servlets se faisait dans ce fichier
+
+Note: Maintenant, on utilise les annotations
+
 ----
 
 ## Hello World
@@ -351,6 +353,28 @@ public class HelloServlet extends HttpServlet {
 - Fichier de configuration de l'application
 - Contient les informations sur les servlets, les filtres, les listeners, etc.
 - Dans notre cas, il est vide car nous utilisons les annotations
+
+----
+
+## Hello World
+
+### URL
+
+- On peut lancer le projet en cliquant sur la flèche verte en haut à droite
+- Lors du lancement de l'application, le navigateur ouvre la page `index.jsp`
+- Sur intelliJ, il prend en URL le nom du build : `http://localhost:8080/hellodemo_war_exploded/`
+- Il est possible de le changer dans les paramètres de lancement
+
+----
+
+## Hello World
+
+### Changer URL
+
+- En haut à droite, dérouler le menu `Edit Configurations`
+- Dans l'onglet `Server`, retirer la fin de l'URL (`nomProjet_war_exploded`)
+- Dans l'onglet `Deployment`, changer le `Application context` par `/`
+- Rebuild l'application et relancez-la
 
 ----
 
