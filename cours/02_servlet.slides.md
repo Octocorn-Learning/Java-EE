@@ -302,7 +302,7 @@ public class HelloServlet extends HttpServlet {
 - Ils sont similaires aux balises PHP `<?php ?>`
 - Elles peuvent être utilisées pour récupérer des attributs
 
-```jsp
+```xhtml
 <% 
 String nom = (String) request.getAttribute("nom"); 
 %>
@@ -316,7 +316,7 @@ String nom = (String) request.getAttribute("nom");
 
 - On pourra afficher les variables dans les balises `<%= %>`
 
-```jsp
+```xhtml
 <%
 String nom = (String) request.getAttribute("nom");
 %>
@@ -333,7 +333,7 @@ String nom = (String) request.getAttribute("nom");
 
 - On peut aussi utiliser `out.print()` pour afficher des variables
 
-```jsp
+```xhtml
 <%
 String nom = (String) request.getAttribute("nom");
 out.print(nom);
@@ -349,7 +349,7 @@ out.print(nom);
 - N'importe quel code peut être exécuté dans les balises `<% %>`
 - On peut donc utiliser des boucles
 
-```jsp
+```xhtml
 <%
 String nom = (String) request.getAttribute("nom");
 for (int i = 0; i < 10; i++) {
@@ -366,7 +366,7 @@ for (int i = 0; i < 10; i++) {
 
 - On peut aussi utiliser des conditions
 
-```jsp
+```xhtml
 <%
   LocalDateTime date = LocalDateTime.now();
   if (date.getHour() < 12) {
@@ -416,7 +416,7 @@ for (int i = 0; i < 10; i++) {
 
 `menu.jsp`
 
-```jsp
+```xhtml
 <nav>
     <ul>
         <li><a href="hello-servlet">Accueil</a></li>
@@ -434,7 +434,7 @@ for (int i = 0; i < 10; i++) {
 
 - On pourra alors inclure le fichier `menu.jsp` dans les autres fichiers
 
-```jsp
+```xhtml
 <%@ include file="menu.jsp" %> <!-- Inclusion du fichier menu.jsp -->
 ```
 
@@ -465,7 +465,7 @@ for (int i = 0; i < 10; i++) {
 - L'EL est utilisé avec `${ }`
 - Elle permet notamment d'insérer des variables dans du code HTML
 
-```jsp
+```xhtml
 <%
 String nom = (String) request.getAttribute("nom");
 out.print(nom);
@@ -474,7 +474,7 @@ out.print(nom);
 
 devient
 
-```jsp  
+```xhtml  
 <h1>Bonjour ${nom}</h1>
 ```
 
@@ -486,7 +486,7 @@ devient
 
 - L'EL permet d'utiliser des ternaires
 
-```jsp
+```xhtml
 <p> ${date.getHour() < 12 ? "Bonjour" : "Bonsoir"} </p>
 ```
 
@@ -498,7 +498,7 @@ devient
 
 - L'EL permet d'accéder aux éléments d'un tableau
 
-```jsp
+```xhtml
 <p> ${noms[0]} </p>
 ```
 
@@ -566,7 +566,7 @@ public class HelloServlet extends HttpServlet {
 }
 ```
 
-```jsp
+```xhtml
 <p> ${personne.nom} </p>
 <p> ${personne.prenom} </p>
 ```
@@ -626,7 +626,7 @@ public class HelloServlet extends HttpServlet {
 
 ### Importer la librairie : `.jsp`
 
-```html
+```xhtml
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 ```
 
@@ -641,7 +641,7 @@ public class HelloServlet extends HttpServlet {
 
 - L'instruction `<c:out>` permet d'afficher une variable
 
-```html
+```xhtml
 
 <c:out value="${nom}"/>
 ```
@@ -658,7 +658,7 @@ Note: Faille XSS = Injection de code dans un formulaire
 
 - Il est aussi possible d'ajouter une valeur par défaut
 
-```html
+```xhtml
 
 <c:out value="${nom}" default="Inconnu"/>
 ```
@@ -671,7 +671,7 @@ Note: Faille XSS = Injection de code dans un formulaire
 
 - L'instruction `<c:set>` permet de définir une variable
 
-```html
+```xhtml
 
 <c:set var="nom" value="Alexandre" scope="page"/>
 ```
@@ -700,7 +700,7 @@ Note: Faille XSS = Injection de code dans un formulaire
 
 Ils sont accessibles avec :
 
-```html
+```xhtml
 
 <c:set target="${nomDuBean}" property="nomDeLaPropriete" value="valeur"/>
 ```
@@ -713,7 +713,7 @@ Ils sont accessibles avec :
 
 - L'instruction `<c:remove>` permet de supprimer une variable
 
-```html
+```xhtml
 
 <c:remove var="nom" scope="page"/>
 ```
@@ -726,7 +726,7 @@ Ils sont accessibles avec :
 
 - On peut utiliser `if` pour exécuter du code si une condition est vraie
 
-```html
+```xhtml
 
 <c:if test="${requestScope.date.getHour() < 12}">
     <p>Bonjour</p>
@@ -743,7 +743,7 @@ Ils sont accessibles avec :
 
 - On peut utiliser `if` pour exécuter du code si une condition est vraie
 
-```html
+```xhtml
 
 <c:if test="${requestScope.date.getHour() < 12}" var="resultat">
     <p>Bonjour</p>
@@ -759,7 +759,7 @@ Ils sont accessibles avec :
 
 - On peut utiliser `choose` pour exécuter du code en fonction d'une condition
 
-```html
+```xhtml
 
 <c:choose>
     <c:when test="${requestScope.date.getHour() < 12}"> <!-- Si la condition est vraie -->
@@ -782,7 +782,7 @@ Ils sont accessibles avec :
 
 - Il est aussi possible de créer une boucle de type `for`
 
-```html
+```xhtml
 
 <c:forEach begin="1" end="10" var="i" step="1">
     <li>${i}</li>
@@ -800,7 +800,7 @@ Ils sont accessibles avec :
 
 ### Boucles - Autre syntaxe
 
-```html
+```xhtml
 
 <c:forEach begin="1" end="10" var="i" step="1">
     <p>
@@ -817,7 +817,7 @@ Ils sont accessibles avec :
 
 - On peut utiliser `forEach` pour parcourir un tableau
 
-```html
+```xhtml
 
 <c:forEach var="name" items="${requestScope.names}">
     <li>${name}</li>
@@ -826,7 +826,7 @@ Ils sont accessibles avec :
 
 OU
 
-```html
+```xhtml
 
 <c:forEach var="name" items="${requestScope.names}">
     <li>
@@ -845,7 +845,7 @@ OU
 
 - L'attribut `varStatus` permet d'accéder à des informations sur la boucle
 
-```html
+```xhtml
 
 <c:forEach var="name" items="${requestScope.names}" varStatus="status">
     <li>${status.index} : ${name}</li>
@@ -887,7 +887,7 @@ OU
 - `action` : URL de la page qui va traiter le formulaire
 - `method` : Méthode HTTP à utiliser pour envoyer le formulaire
 
-```html
+```xhtml
 
 <form action="form" method="post">
     <!-- Contenu du formulaire -->
@@ -908,7 +908,7 @@ OU
 - `value` : Valeur du champ
 - `placeholder` : Placeholder du champ
 
-```html
+```xhtml
 
 <form action="form" method="post">
     <label for="nom"> Nom :</label>
@@ -943,7 +943,7 @@ public void doPost(HttpServletRequest request, HttpServletResponse response) thr
 
 - On peut ensuite afficher la valeur dans la page JSP
 
-```jsp
+```xhtml
 <c:out value="Bonjour ${nom}" />
 ```
 
@@ -1026,7 +1026,7 @@ public class User {
 
 ### Un formulaire plus complet
 
-```html
+```xhtml
 <h2> Formulaire d'identité</h2>
 <form action="form" method="post">
     <label for="nom"> Nom :</label>
@@ -1049,7 +1049,7 @@ public class User {
 
 ### Un formulaire plus complet
 
-```html
+```xhtml
 
 <style>
     body {
@@ -1270,8 +1270,14 @@ public class User {
 }
 ```
 
-----
+---
 
 ## A vous de jouer !
 
 Une petite to do list ?
+
+---
+
+# La suite !
+
+[Retour à l'index](index.html)
