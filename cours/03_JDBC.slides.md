@@ -341,3 +341,21 @@ while (resultSet.next()) {
 > On doit toujours parcourir les résultats avec `next` avant de récupérer les valeurs !
 
 ----
+
+## Démonstration !
+
+Un petit CRUD musical !
+
+----
+
+## JDBC
+
+### A vous de jouer !
+
+---
+
+# Aller plus loin avec JPA
+
+La partie JDBC est terminée, mais il existe une autre API Java qui permet d'interagir avec une BDD : JPA.  
+
+Elle sera abordée dans le cours dédié à Spring !
