@@ -27,7 +27,10 @@
     </script></head>
   <body>
     <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template">
+      <div class="slides">
+        <section data-markdown data-separator="\r?\n---\r?\n" data-separator-vertical="\r?\n----\r?\n">
+          <textarea data-template>
+            
 
 # Index
 
@@ -35,7 +38,10 @@
 - [Servlets](02_Servlets.slides.html)
 - [JDBC](03_JDBC.slides.html)
 
-> ⚠️ Le cours est en cours de rédaction. Le contenu des slides et des exercices est amené à évoluer. ⚠️</script></section></div>
+> ⚠️ Le cours est en cours de rédaction. Le contenu des slides et des exercices est amené à évoluer. ⚠️
+          </textarea>
+        </section>
+      </div>
     </div>
 
     <script src="./dist/reveal.js"></script>
@@ -79,7 +85,7 @@
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {}, queryOptions);
+      var options = extend(defaultOptions, {"_":["./cours"],"static":true,"glob":"*.slides.md"}, queryOptions);
     </script>
 
     <script src="./_assets/theme.js"></script>

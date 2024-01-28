@@ -27,14 +27,19 @@
     </script></head>
   <body>
     <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template">
+      <div class="slides">
+        <section data-markdown data-separator="\r?\n---\r?\n" data-separator-vertical="\r?\n----\r?\n">
+          <textarea data-template>
+            
 
 # Servlet
 
 ![JEE](assets/JEE.png) <!-- .element width="30%" align="left" -->
 
 ![IntelliJ](assets/intellij.png) <!-- .element width="30%" align="right" -->
-</script></section><section ><section data-markdown><script type="text/template">
+
+---
+
 ## Servlet
 
 ### Rappels
@@ -42,21 +47,27 @@
 - Comme expliqué, un serveur web est un programme qui tourne en permanence sur une machine et qui attend des requêtes
   HTTP
 - Lorsqu'une requête arrive, le serveur web va chercher le fichier correspondant à la requête et le renvoie au client
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Servlet
 
 ### Déroulement du cours
 
 - Le cours sera réalisé sous la forme d'une démonstration fil rouge
 - Tous les points abordés lors de cette démonstration seront expliqués dans les slides !
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Servlet
 
 ### Fichiers
 
 - Le `Servlet` est une classe Java qui va être exécutée par le serveur web
 - Le `.jsp` est un fichier similar à un `.html` qui va être exécuté par le serveur web
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Servlet
 
 ### `HttpServlet`
@@ -74,7 +85,9 @@ public class HelloServlet extends HttpServlet {
     }
 }
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Servlet
 
 ### Annotations
@@ -94,7 +107,9 @@ public class HelloServlet extends HttpServlet {
     }
 }
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Servlet
 
 ### `doGet`
@@ -112,7 +127,9 @@ public class HelloServlet extends HttpServlet {
     }
 }
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Servlet
 
 ### `HttpServletRequest`
@@ -131,7 +148,9 @@ public class HelloServlet extends HttpServlet {
     }
 }
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Servlet
 
 ### `HttpServletResponse`
@@ -150,7 +169,9 @@ public class HelloServlet extends HttpServlet {
     }
 }
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Servlet
 
 ### `doGet`
@@ -169,7 +190,9 @@ public class HelloServlet extends HttpServlet {
     }
 }
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Servlet
 
 ### Le HTML
@@ -188,7 +211,9 @@ public class HelloServlet extends HttpServlet {
     }
 }
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Servlet
 
 ### `getServletContext`
@@ -207,7 +232,9 @@ public class HelloServlet extends HttpServlet {
     }
 }
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Servlet
 
 ### `getRequestDispatcher`
@@ -226,7 +253,9 @@ public class HelloServlet extends HttpServlet {
     }
 }
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Servlet
 
 ### `forward`
@@ -245,13 +274,17 @@ public class HelloServlet extends HttpServlet {
     }
 }
 ```
-</script></section></section><section ><section data-markdown><script type="text/template">
+
+---
+
 # JSP
 
 ![JEE](assets/JEE.png) <!-- .element width="30%" align="left" -->
 
 ![IntelliJ](assets/intellij.png) <!-- .element width="30%" align="right" -->
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## JSP
 
 ### Fichiers
@@ -259,7 +292,9 @@ public class HelloServlet extends HttpServlet {
 - Les fichiers JSP sont à placer dans le dossier `webapp/WEB-INF`
 - Les fichiers JSP sont similaires à des fichiers HTML
 - Il sera possible d'utiliser des balises spéciales pour exécuter du code Java
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## JSP
 
 ### Transmettre des attributs
@@ -279,7 +314,9 @@ public class HelloServlet extends HttpServlet {
     }
 }
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## JSP
 
 ### Récupérer des attributs
@@ -293,7 +330,9 @@ public class HelloServlet extends HttpServlet {
 String nom = (String) request.getAttribute("nom"); 
 %>
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## JSP
 
 ### Afficher des attributs
@@ -308,7 +347,9 @@ String nom = (String) request.getAttribute("nom");
 ```
 
 > Une fois la variable importée dans le document, on peut l'utiliser dans d'autres balises !
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## JSP
 
 ### Afficher des attributs
@@ -321,7 +362,9 @@ String nom = (String) request.getAttribute("nom");
 out.print(nom);
 %>
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## JSP
 
 ### Exécuter du code Java
@@ -337,7 +380,9 @@ for (int i = 0; i < 10; i++) {
 }
 %>
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## JSP
 
 ### Exécuter du code Java
@@ -354,7 +399,9 @@ for (int i = 0; i < 10; i++) {
   }
  %>
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 # JSP
 
 ## Les inclusions
@@ -362,7 +409,9 @@ for (int i = 0; i < 10; i++) {
 ![JEE](assets/JEE.png) <!-- .element width="30%" align="left" -->
 
 ![IntelliJ](assets/intellij.png) <!-- .element width="30%" align="right" -->
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Inclusions
 
 ### Définition
@@ -372,14 +421,18 @@ for (int i = 0; i < 10; i++) {
 - C'est utile pour éviter la duplication de code !
 
 > Exemple : Un header et un footer !
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Inclusions
 
 ### Inclure un fichier
 
 - Pour inclure un fichier, on utilise la balise `<%@ include file="nomDuFichier.jsp" %>`
 - Le fichier doit être dans le même dossier que le fichier qui l'inclut
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Inclusions
 
 ### Exemple
@@ -395,7 +448,9 @@ for (int i = 0; i < 10; i++) {
     </ul>
 </nav>
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Inclusions
 
 ### Exemple
@@ -405,13 +460,17 @@ for (int i = 0; i < 10; i++) {
 ```xhtml
 <%@ include file="menu.jsp" %> <!-- Inclusion du fichier menu.jsp -->
 ```
-</script></section></section><section ><section data-markdown><script type="text/template">
+
+---
+
 # Expression Language
 
 ![JEE](assets/JEE.png) <!-- .element width="30%" align="left" -->
 
 ![IntelliJ](assets/intellij.png) <!-- .element width="30%" align="right" -->
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Expression Language
 
 ### Définition
@@ -419,7 +478,9 @@ for (int i = 0; i < 10; i++) {
 - L'Expression Language (EL) est un langage de template
 - Il permet d'insérer des variables dans du code HTML
 - Il est utilisé dans les fichiers `.jsp`
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Expression Language
 
 ### Syntaxe
@@ -439,7 +500,9 @@ devient
 ```xhtml  
 <h1>Bonjour ${nom}</h1>
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Expression Language
 
 ### Ternaire
@@ -449,7 +512,9 @@ devient
 ```xhtml
 <p> ${date.getHour() < 12 ? "Bonjour" : "Bonsoir"} </p>
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Expression Language
 
 ### Tableaux
@@ -459,7 +524,9 @@ devient
 ```xhtml
 <p> ${noms[0]} </p>
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Expression Language
 
 ### Objets
@@ -470,7 +537,9 @@ devient
     - Définir une classe
     - Définir des attributs privés
     - Définir des getters et des setters
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Expression Language
 
 ### Objets - Exemple
@@ -502,7 +571,9 @@ public class Personne {
     }
 }
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Expression Language
 
 ### Objets - Exemple
@@ -522,7 +593,9 @@ public class HelloServlet extends HttpServlet {
 <p> ${personne.nom} </p>
 <p> ${personne.prenom} </p>
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Expression Language
 
 ### Aller plus loin
@@ -530,20 +603,26 @@ public class HelloServlet extends HttpServlet {
 - Utiliser du code Java dans les fichiers `.jsp` n'est pas une bonne pratique
 - Il est préférable de séparer le code Java et le code HTML
 - On verra comment faire dans la suite du cours !
-</script></section></section><section ><section data-markdown><script type="text/template">
+
+---
+
 # JSTL
 
 ![JEE](assets/JEE.png) <!-- .element width="30%" align="left" -->
 
 ![IntelliJ](assets/intellij.png) <!-- .element width="30%" align="right" -->
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## JSTL
 
 ### Définition
 
 - La JSTL est une librairie qui permet d'utiliser des boucles et des conditions dans les fichiers `.jsp`
 - L'utilisation passe par l'import de la librairie dans le fichier `.jsp`
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## JSTL
 
 ### Importer la librairie : `pom.xml`
@@ -563,7 +642,9 @@ public class HelloServlet extends HttpServlet {
     </dependency>
 </dependencies>
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## JSTL
 
 ### Importer la librairie : `.jsp`
@@ -574,7 +655,9 @@ public class HelloServlet extends HttpServlet {
 
 - `prefix` : Préfixe à utiliser pour appeler la librairie
 - `uri` : Chemin vers la librairie
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## JSTL
 
 ### Afficher une variable
@@ -588,8 +671,10 @@ public class HelloServlet extends HttpServlet {
 
 > Utile pour éviter les failles XSS !
 
-<aside class="notes"><p>Faille XSS = Injection de code dans un formulaire</p>
-</aside></script></section><section data-markdown><script type="text/template">
+Note: Faille XSS = Injection de code dans un formulaire
+
+----
+
 ## JSTL
 
 ### Afficher une variable
@@ -600,7 +685,9 @@ public class HelloServlet extends HttpServlet {
 
 <c:out value="${nom}" default="Inconnu"/>
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## JSTL
 
 ### Définir une variable
@@ -615,7 +702,9 @@ public class HelloServlet extends HttpServlet {
 - `var` : Nom de la variable
 - `value` : Valeur de la variable
 - `scope` : Portée de la variable
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## JSTL
 
 ### Les portées
@@ -625,7 +714,9 @@ public class HelloServlet extends HttpServlet {
 - `session` : La variable est accessible dans la page, dans les pages incluses et dans la session
 - `application` : La variable est accessible dans la page, dans les pages incluses, dans la session et dans
   l'application
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## JSTL
 
 ### Les Beans
@@ -636,7 +727,9 @@ Ils sont accessibles avec :
 
 <c:set target="${nomDuBean}" property="nomDeLaPropriete" value="valeur"/>
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## JSTL
 
 ### Supprimer une variable
@@ -647,7 +740,9 @@ Ils sont accessibles avec :
 
 <c:remove var="nom" scope="page"/>
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## JSTL
 
 ### Conditions
@@ -662,7 +757,9 @@ Ils sont accessibles avec :
 ```
 
 > Avec cette syntaxe, on ne peut pas utiliser de `else`/`else if` !
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## JSTL
 
 ### Enregistrer le résultat d'un test
@@ -676,7 +773,9 @@ Ils sont accessibles avec :
 </c:if>
 <c:out value="${resultat}"/>
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## JSTL
 
 ### Conditions
@@ -697,7 +796,9 @@ Ils sont accessibles avec :
     </c:otherwise>
 </c:choose>
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## JSTL
 
 ### Boucles
@@ -715,7 +816,9 @@ Ils sont accessibles avec :
 - `end` : Valeur de fin (i < 10)
 - `step` : Pas (i++)
 - `var` : Nom de la variable
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## JSTL
 
 ### Boucles - Autre syntaxe
@@ -728,7 +831,9 @@ Ils sont accessibles avec :
     </p>
 </c:forEach>
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## JSTL
 
 ### Boucles
@@ -754,7 +859,9 @@ OU
 ```
 
 > `begin` et `end` peuvent aussi être utilisés
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## JSTL
 
 ### Boucles - statut
@@ -772,7 +879,9 @@ OU
 - `count` : Nombre d'itérations
 - `first` : Vrai si c'est la première itération
 - `last` : Vrai si c'est la dernière itération
-</script></section></section><section ><section data-markdown><script type="text/template">
+
+---
+
 # JEE
 
 ## Les formulaires
@@ -780,7 +889,9 @@ OU
 ![JEE](assets/JEE.png) <!-- .element width="30%" align="left" -->
 
 ![IntelliJ](assets/intellij.png) <!-- .element width="30%" align="right" -->
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Les formulaires
 
 ### Définition
@@ -788,7 +899,9 @@ OU
 - Comme pour tous les sites web, il est possible de créer des formulaires en JEE
 - Ils permettent de récupérer des informations de l'utilisateur
 - Ils sont utilisés pour créer des comptes, envoyer des messages, etc.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Les formulaires
 
 ### Créer un formulaire
@@ -805,7 +918,9 @@ OU
 ```
 
 > Ici, la méthode `doPost` de la servlet `form` sera appelée !
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Les formulaires
 
 ### Les champs
@@ -824,7 +939,9 @@ OU
     <input type="submit" value="Envoyer"/>
 </form>
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Les formulaires
 
 ### Récupérer la valeur d'un champ
@@ -840,7 +957,9 @@ public void doPost(HttpServletRequest request, HttpServletResponse response) thr
     this.getServletContext().getRequestDispatcher("/WEB-INF/form.jsp").forward(request, response);
 }
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Les formulaires
 
 ### Récupérer la valeur d'un champ
@@ -850,7 +969,9 @@ public void doPost(HttpServletRequest request, HttpServletResponse response) thr
 ```xhtml
 <c:out value="Bonjour ${nom}" />
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Les formulaires
 
 ### Un formulaire plus complet
@@ -921,7 +1042,9 @@ public class User {
     }
 }
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Les formulaires
 
 ### Un formulaire plus complet
@@ -942,7 +1065,9 @@ public class User {
     <input type="submit" value="Envoyer"/>
 </form>
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Les formulaires
 
 ### Un formulaire plus complet
@@ -1054,7 +1179,9 @@ public class User {
 ```
 
 > Source HTML + CSS : https://codepen.io/ilybel/pen/BVGrKa
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Les formulaires
 
 ### Un formulaire plus complet
@@ -1076,7 +1203,9 @@ public void doPost(HttpServletRequest request, HttpServletResponse response) thr
     this.getServletContext().getRequestDispatcher("/WEB-INF/form.jsp").forward(request, response);
 }
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Les formulaires
 
 ### Passer l'objet à la JSP
@@ -1093,7 +1222,9 @@ public void doPost(HttpServletRequest request, HttpServletResponse response) thr
     this.getServletContext().getRequestDispatcher("/WEB-INF/form.jsp").forward(request, response);
 }
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Les formulaires
 
 ### Passer l'objet à la JSP
@@ -1161,14 +1292,21 @@ public class User {
     }
 }
 ```
-</script></section></section><section  data-markdown><script type="text/template">
+
+---
+
 ## A vous de jouer !
 
 Une petite to do list ?
-</script></section><section  data-markdown><script type="text/template">
+
+---
+
 # La suite !
 
-[Retour à l'index](index.html)</script></section></div>
+[Retour à l'index](index.html)
+          </textarea>
+        </section>
+      </div>
     </div>
 
     <script src="./dist/reveal.js"></script>
@@ -1212,7 +1350,7 @@ Une petite to do list ?
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {}, queryOptions);
+      var options = extend(defaultOptions, {"_":["./cours"],"static":true,"glob":"*.slides.md"}, queryOptions);
     </script>
 
     <script src="./_assets/theme.js"></script>

@@ -27,14 +27,19 @@
     </script></head>
   <body>
     <div class="reveal">
-      <div class="slides"><section ><section data-markdown><script type="text/template">
+      <div class="slides">
+        <section data-markdown data-separator="\r?\n---\r?\n" data-separator-vertical="\r?\n----\r?\n">
+          <textarea data-template>
+            
 
 # Java EE
 
 ![JEE](assets/JEE.png) <!-- .element width="30%" align="left" -->
 
 ![IntelliJ](assets/intellij.png) <!-- .element width="30%" align="right" -->
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Java EE
 
 ### Introduction
@@ -42,14 +47,18 @@
 - Java Enterprise Edition
 - Framework Java pour le développement d'applications web
 - API Java pour le développement d'applications web
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Java EE
 
 ### Introduction
 
 - Orienté serveur
 - Comparable à .NET, PHP, Ruby on Rails, etc.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Java EE
 
 ### Jakarta EE
@@ -59,7 +68,9 @@
 - Depuis 2019, Java EE est devenu Jakarta
 
 > N'a pas pu être nommé Java EE à cause de la marque déposée par Oracle
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Java EE
 
 ### Orienté serveur
@@ -68,7 +79,9 @@
 
 - Les applications sont déployées sur un serveur
 - Il traite les requêtes des clients et renvoie les réponses HTTP
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Java EE
 
 ### Orienté serveur
@@ -77,7 +90,9 @@
 
 - **Serveur HTTP** : Serveur qui traite les requêtes HTTP
 - **Conteneur** : Partie qui exécute les applications Java EE
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Java EE
 
 ### Serveur Tomcat
@@ -85,13 +100,17 @@
 - Serveur web open source que nous utiliserons
 - Il existe de nombreux autres serveurs web Java EE comme Glassfish, Wildfly, etc.
 - Tomcat est le plus simple à prendre en main, et surtout est gratuit
-</script></section></section><section ><section data-markdown><script type="text/template">
+
+---
+
 # Le MVC
 
 ![JEE](assets/JEE.png) <!-- .element width="30%" align="left" -->
 
 ![IntelliJ](assets/intellij.png) <!-- .element width="30%" align="right" -->
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## MVC
 
 ### Définition
@@ -99,7 +118,9 @@
 - **M**odel **V**iew **C**ontroller
 - Architecture logicielle (design pattern)
 - Sépare les données, la logique et l'interface utilisateur
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## MVC
 
 ### Usage
@@ -107,13 +128,17 @@
 - En JEE, il n'y a pas de structure imposée
 - Il y a donc de multiples façons de structurer son application
 - Le MVC est une des plus utilisées
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## MVC
 
 ### Fonctionnement
 
 ![MVC](assets/mvc.png) <!-- .element width="50%" -->
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## MVC
 
 ### Définitions
@@ -121,7 +146,9 @@
 - **Controller** : Gère les requêtes HTTP et les envoie au bon **Model**
 - **Model** : Gère les données et la logique de l'application
 - **View** : Gère l'interface utilisateur (HTML, CSS...)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## MVC
 
 ### Avantages
@@ -130,7 +157,9 @@
 - Facilite la maintenance et l'évolution de l'application
 - Connu et utilisé par de nombreux développeurs
 - Facilite le travail en équipe
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## MVC
 
 ### Inconvénients
@@ -138,7 +167,9 @@
 - Risque de cloisonnement des développeurs (front, back, etc.)
 - Augmentation du nombre de fichiers
 - Augmente la complexité de l'application
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## MVC et JEE
 
 - **Controller** : Servlet
@@ -146,7 +177,9 @@
 - **View** : Pages JSP (Java Server Pages)
 
 > Le modèle peut communiquer avec la BDD
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## JEE et Frameworks
 
 - Il existe de nombreux frameworks Java EE qui se basent sur le MVC
@@ -154,18 +187,24 @@
 - Ils sont livrés avec des fonctionnalités supplémentaires !
 
 > Nous utiliserons uniquement les composants de base de Java EE
-</script></section></section><section ><section data-markdown><script type="text/template">
+
+---
+
 # Setup
 
 ![JEE](assets/JEE.png) <!-- .element width="30%" align="left" -->
 
 ![IntelliJ](assets/intellij.png) <!-- .element width="30%" align="right" -->
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Setup
 
 - Installez IntelliJ IDEA
 - Installez le JDK 17 ou supérieur
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Setup
 
 ### Tomcat
@@ -173,13 +212,17 @@
 - Sur la page de [Tomcat 10](https://tomcat.apache.org/download-10.cgi)
 - Sur la page, cliquez sur le lien "64-bit Windows Zip" de la section "Core"
 - Extraire le dossier à la racide de `C:\Tomcat`
-</script></section></section><section ><section data-markdown><script type="text/template">
+
+---
+
 # Hello World
 
 ![JEE](assets/JEE.png) <!-- .element width="30%" align="left" -->
 
 ![IntelliJ](assets/intellij.png) <!-- .element width="30%" align="right" -->
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Hello World
 
 ### Création du projet
@@ -189,14 +232,18 @@
 - Sélectionnez `Web Application` dans la liste à droite
 - Dans `Application Server`, cliquez sur `Configure...` et sélectionnez le dossier contenant Tomcat
 - Dans la page suivante, sélectionnez la version de JEE que vous souhaitez utiliser
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Hello World
 
 ### Démarrer l'application
 
 - Une fois les dépendances chargées, cliquez sur `Run` en haut à droite
 - La page devrait s'ouvrir dans votre navigateur par défaut !
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Hello World
 
 ### Trouble shooting
@@ -204,7 +251,9 @@
 - Il arrive que Tomcat charge indéfiniment
 - Dans ce cas, cliquez sur File > Invalidate Cache > Invalidate and Restart
 - Redémarrez l'application
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Hello World
 
 ### Contenu du projet
@@ -223,7 +272,9 @@
 │               └── web.xml # Fichier de configuration
 └── pom.xml
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Hello World
 
 ### Servlet
@@ -270,7 +321,9 @@ public class HelloServlet extends HttpServlet {
     }
 }
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Hello World
 
 ### JSP
@@ -307,7 +360,9 @@ public class HelloServlet extends HttpServlet {
 </body>
 </html>
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Hello World
 
 ### `web.xml`
@@ -323,8 +378,10 @@ public class HelloServlet extends HttpServlet {
 
 > Avant, la configuration des servlets se faisait dans ce fichier
 
-<aside class="notes"><p>Maintenant, on utilise les annotations</p>
-</aside></script></section><section data-markdown><script type="text/template">
+Note: Maintenant, on utilise les annotations
+
+----
+
 ## Hello World
 
 ### web.xml
@@ -332,7 +389,9 @@ public class HelloServlet extends HttpServlet {
 - Fichier de configuration de l'application
 - Contient les informations sur les servlets, les filtres, les listeners, etc.
 - Dans notre cas, il est vide car nous utilisons les annotations
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Hello World
 
 ### URL
@@ -341,7 +400,9 @@ public class HelloServlet extends HttpServlet {
 - Lors du lancement de l'application, le navigateur ouvre la page `index.jsp`
 - Sur intelliJ, il prend en URL le nom du build : `http://localhost:8080/hellodemo_war_exploded/`
 - Il est possible de le changer dans les paramètres de lancement
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Hello World
 
 ### Changer URL
@@ -350,19 +411,25 @@ public class HelloServlet extends HttpServlet {
 - Dans l'onglet `Server`, retirer la fin de l'URL (`nomProjet_war_exploded`)
 - Dans l'onglet `Deployment`, changer le `Application context` par `/`
 - Rebuild l'application et relancez-la
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Hello World
 
 ### Don't Panic
 
 Nous verrons en détail le fonctionnement des servlets et des JSP dans les prochains chapitres !
-</script></section></section><section ><section data-markdown><script type="text/template">
+
+---
+
 # Maven
 
 ![JEE](assets/JEE.png) <!-- .element width="30%" align="left" -->
 
 ![IntelliJ](assets/intellij.png) <!-- .element width="30%" align="right" -->
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Maven
 
 ### Définition
@@ -371,14 +438,18 @@ Nous verrons en détail le fonctionnement des servlets et des JSP dans les proch
 - Gère les dépendances, les tests, la compilation, etc.
 
 > Equivalent à NPM pour NodeJS
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Maven
 
 ### Structure
 
 - `pom.xml` : Fichier de configuration
 - Il est rédigé en XML
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Maven
 
 ### Fonctionnement
@@ -386,7 +457,9 @@ Nous verrons en détail le fonctionnement des servlets et des JSP dans les proch
 - Maven télécharge les dépendances dans un dossier local
 - Il les ajoute au projet lors de la compilation
 - Il est possible de définir des dépendances dans le `pom.xml`
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Maven
 
 ### Dépendances
@@ -404,7 +477,9 @@ Nous verrons en détail le fonctionnement des servlets et des JSP dans les proch
     </dependency>
 </dependencies>
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Maven
 
 ### Dépendances
@@ -413,7 +488,9 @@ Nous verrons en détail le fonctionnement des servlets et des JSP dans les proch
 - `artifactId` : Nom de l'application
 - `version` : Version de l'application
 - `scope` : Portée de la dépendance
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Maven
 
 ### Dépendances : scope
@@ -424,7 +501,9 @@ Nous verrons en détail le fonctionnement des servlets et des JSP dans les proch
 - `test` : Dépendance nécessaire aux tests
 - `system` : Dépendance fournie par le système
 - `import` : Dépendance fournie par un autre POM
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Maven
 
 ### Ajouter des dépendances
@@ -433,7 +512,9 @@ Nous verrons en détail le fonctionnement des servlets et des JSP dans les proch
 - Il en existe plusieurs : Maven Central, MvnRepository, etc.
 - Pour les ajouter au projet, il faut les définir dans le `pom.xml`
 - Les balises sont listés sur la page de la dépendance (RTFM)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Maven
 
 ### Ajouter des dépendances
@@ -448,7 +529,9 @@ Nous verrons en détail le fonctionnement des servlets et des JSP dans les proch
   </dependency>
 </dependencies>
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Maven
 
 ### Installation
@@ -458,7 +541,9 @@ Nous verrons en détail le fonctionnement des servlets et des JSP dans les proch
   1. Clic droit sur le `pom.xml` > `Maven` > `Reload Project`
   2. Un tooltip est également présent en haut à droite
   3. Sur la barre d'outils, il y a également un bouton "M" pour Maven
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Maven
 
 ### Installation
@@ -467,7 +552,9 @@ Nous verrons en détail le fonctionnement des servlets et des JSP dans les proch
 - Comme pour `npm install` dans un projet NodeJS !
 
 > Les dépendances sont à recharger à chaque fois que le `pom.xml` est modifié !
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Maven
 
 ### `properties`
@@ -477,7 +564,9 @@ Nous verrons en détail le fonctionnement des servlets et des JSP dans les proch
 - Elles sont utilisées avec `${nom_de_la_variable}`
 
 > Très utile pour définir des versions de dépendances !
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Maven
 
 ### `properties`
@@ -496,10 +585,15 @@ Nous verrons en détail le fonctionnement des servlets et des JSP dans les proch
     </dependency>
 </dependencies>
 ```
-</script></section></section><section  data-markdown><script type="text/template">
+
+---
+
 # La suite !
 
-[Retour à l'index](index.html)</script></section></div>
+[Retour à l'index](index.html)
+          </textarea>
+        </section>
+      </div>
     </div>
 
     <script src="./dist/reveal.js"></script>
@@ -543,7 +637,7 @@ Nous verrons en détail le fonctionnement des servlets et des JSP dans les proch
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {}, queryOptions);
+      var options = extend(defaultOptions, {"_":["./cours"],"static":true,"glob":"*.slides.md"}, queryOptions);
     </script>
 
     <script src="./_assets/theme.js"></script>

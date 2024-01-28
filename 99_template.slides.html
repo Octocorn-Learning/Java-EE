@@ -27,9 +27,15 @@
     </script></head>
   <body>
     <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template">
+      <div class="slides">
+        <section data-markdown data-separator="\r?\n---\r?\n" data-separator-vertical="\r?\n----\r?\n">
+          <textarea data-template>
+            
 
-# Titre</script></section></div>
+# Titre
+          </textarea>
+        </section>
+      </div>
     </div>
 
     <script src="./dist/reveal.js"></script>
@@ -73,7 +79,7 @@
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {}, queryOptions);
+      var options = extend(defaultOptions, {"_":["./cours"],"static":true,"glob":"*.slides.md"}, queryOptions);
     </script>
 
     <script src="./_assets/theme.js"></script>
